@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <title>Calculator</title>
+  <link rel="stylesheet" href="calci.css">
+</head>
+<body>
+   <div class="calculator">
+    <input type="text" readonly id="display-text">
+
+    <div class="button-container">
+
+      <button class="button" onclick="myFunction(currentDisplay = ' ')">C</button>
+      <button class="button" onclick="myFunction(currentDisplay = currentDisplay + '1')">1</button>
+      <button class="button" onclick="myFunction(currentDisplay = currentDisplay + '2')">2</button>
+
+      <button class="button" onclick="myFunction(currentDisplay = currentDisplay + '+')">+</button>
+      <button class="button" onclick="myFunction(currentDisplay = currentDisplay + '3')">3</button>
+      <button class="button" onclick="myFunction(currentDisplay = currentDisplay + '4')">4</button>
+
+      <button class="button" onclick="myFunction(currentDisplay = currentDisplay + '-')">-</button>
+      <button class="button" onclick="myFunction(currentDisplay = currentDisplay + '5')">5</button>
+      <button class="button" onclick="myFunction(currentDisplay = currentDisplay + '6')">6</button>
+
+      <button class="button" onclick="myFunction(currentDisplay = currentDisplay + '*')">*</button>
+      <button class="button" onclick="myFunction(currentDisplay = currentDisplay + '7')">7</button>
+      <button class="button" onclick="myFunction(currentDisplay = currentDisplay + '8')">8</button>
+
+      <button class="button" onclick="myFunction(currentDisplay = currentDisplay + '/')">/</button>
+      <button class="button" onclick="myFunction(currentDisplay = eval(currentDisplay))">=</button>
+      <button class="button" onclick="myFunction(currentDisplay = currentDisplay + '9')">9</button>
+
+      <button class="button" onclick="myFunction(currentDisplay = currentDisplay + '0')">0</button>
+      <button class="button" onclick="myFunction(currentDisplay = currentDisplay + '.')">.</button>
+
+
+    </div>
+       
+   </div>  
+
+   
+  <script>
+  let currentDisplay = ' ' ;
+  document.querySelector('#display-text').innerText = currentDisplay ;
+
+  function myFunction() {
+    document.querySelector('#display-text').value = currentDisplay ;
+  }
+  </script>
+</body>
+</html>
